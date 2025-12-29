@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Curso de HTML, CSS e JS</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="container nav-content">
+    <a href="https://jornadadodev.com.br/cursos/front-end" target="_blank">
+    <img class="logo" src="img/logo.png" alt="Logo">
+    </a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-content">
+    <h1>Estudo de HTML</h1>
+  </div>
+</header>
+
+  <div class="videos-grid">
+
+    <div class="card-video video-botao" onclick="clicarVideo('1')">
+        <video src="videos/html.mp4" muted></video>
+        <p class="legenda">HTML Básico</p>
+    </div>
+
+    <div class="card-video video-botao" onclick="clicarVideo('2')">
+        <video src="videos/css.mp4" muted></video>
+        <p class="legenda">CSS Essencial</p>
+    </div>
+
+    <div class="card-video video-botao" onclick="clicarVideo('3')">
+        <video src="videos/js.mp4" muted></video>
+        <p class="legenda">JavaScript Inicial</p>
+    </div>
+
+    <div class="card-video video-botao" onclick="clicarVideo('4')">
+        <video src="v4.mp4" muted></video>
+        <p class="legenda">Aula 4</p>
+    </div>
+
+    <div class="card-video video-botao" onclick="clicarVideo('5')">
+        <video src="v5.mp4" muted></video>
+        <p class="legenda">Aula 5</p>
+    </div>
+
+    <div class="card-video video-botao" onclick="clicarVideo('6')">
+        <video src="v6.mp4" muted></video>
+        <p class="legenda">Aula 6</p>
+    </div>
+
+    <div class="card-video video-botao" onclick="clicarVideo('7')">
+        <video src="v7.mp4" muted></video>
+        <p class="legenda">Aula 7</p>
+    </div>
+
+    <div class="card-video video-botao" onclick="clicarVideo('8')">
+        <video src="v8.mp4" muted></video>
+        <p class="legenda">Aula 8</p>
+    </div>
+
+    <div class="card-video video-botao" onclick="clicarVideo('9')">
+        <video src="v9.mp4" muted></video>
+        <p class="legenda">Aula 9</p>
+    </div>
+
+  </div>
+
+
+<footer>
+  <div class="container">
+    © 2025 — Autor: Marcelo Correia
+  </div>
+</footer>
+<script>
+function clicarVideo(id) {
+  const video = document.querySelectorAll("video")[id-1];
+  
+  // Se o vídeo está pausado, toca; se está tocando, pausa
+  if (video.paused) {
+    video.play();
+  } else {
+    video.pause();
+  }
+
+  // Colocar em tela cheia ao tocar
+  if (video.requestFullscreen) {
+    video.requestFullscreen();
+  } else if (video.webkitRequestFullscreen) { // Safari
+    video.webkitRequestFullscreen();
+  } else if (video.msRequestFullscreen) { // IE11
+    video.msRequestFullscreen();
+  }
+}
+</script>
+
+</body>
+</html>
